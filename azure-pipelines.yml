@@ -29,6 +29,7 @@ steps:
     KeyVaultName: 'KV-A4O-BUILD-PROD-SCUS'
     SecretsFilter: '*'
     RunAsPreJob: false
+
 - bash: |
     set -ex
     env
