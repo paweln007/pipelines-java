@@ -22,3 +22,13 @@ steps:
     python --version
     python3 --version
   displayName: 'Run a multi-line script'
+
+- task: AzureKeyVault@1
+  inputs:
+    azureSubscription: 'AzureRmConnection'
+    KeyVaultName: 'KV-A4O-BUILD-PROD-SCUS'
+    SecretsFilter: '*'
+    RunAsPreJob: false
+- bash: |
+    set -ex
+    env
